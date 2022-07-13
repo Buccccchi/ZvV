@@ -1,0 +1,13 @@
+{
+    "values": [
+      "minecraft:lapis_block",
+      "minecraft:gold_block",
+      "minecraft:iron_block",
+      "minecraft:diamond_block",
+      "minecraft:emerald_block",
+      "minecraft:smooth_red_sandstone",
+      "minecraft:coal_block",
+      "minecraft:purpur_block",
+      "minecraft:magma_block"
+    ]
+}

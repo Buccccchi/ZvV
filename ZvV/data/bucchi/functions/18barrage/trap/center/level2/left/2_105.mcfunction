@@ -1,0 +1,5 @@
+execute positioned as @e[tag=top] run summon minecraft:armor_stand ~ 62 -187 {Tags:["center2_2E","follow","center2_2_2","position0_0","small_block"],ArmorItems:[{},{},{},{id:"minecraft:lapis_block",Count:1b}],Small:1b,Invisible:1b,Marker:1b,NoBasePlate:1b,Fire:32767s,Pose:{Head:[180.0f,0.0f,0.0f],LeftLeg:[180.0f,0.0f,0.0f],RightLeg:[180.0f,0.0f,0.0f]}}
+execute positioned as @e[tag=bottom] run summon minecraft:armor_stand ~ 62 -213 {Tags:["center2_2F","follow","center2_2_2","position0_0","small_block"],ArmorItems:[{},{},{},{id:"minecraft:redstone_block",Count:1b}],Small:1b,Invisible:1b,Marker:1b,NoBasePlate:1b,Fire:32767s,Pose:{Head:[180.0f,0.0f,0.0f],LeftLeg:[180.0f,0.0f,0.0f],RightLeg:[180.0f,0.0f,0.0f]}}
+execute as @e[tag=follow,tag=center2_2E] positioned as @s rotated as @e[tag=top] run teleport @s ~ 65.5 ~ ~120 0
+execute as @e[tag=follow,tag=center2_2F] positioned as @s rotated as @e[tag=bottom] run teleport @s ~ 65.5 ~ ~-60 0
+tag @e[tag=follow] remove follow

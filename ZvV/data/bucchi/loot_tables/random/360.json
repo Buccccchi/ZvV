@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_attributes",
+                            "modifiers": [
+                                {
+                                    "name": "random",
+                                    "attribute": "random",
+                                    "operation": "addition",
+                                    "amount": {
+                                        "min": 0.0,
+                                        "max": 360.0,
+                                        "type": "minecraft:uniform"
+                                    },
+                                    "slot": "feet"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
