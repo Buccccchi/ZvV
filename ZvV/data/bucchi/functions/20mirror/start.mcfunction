@@ -7,3 +7,4 @@ fill 212 69 -201 212 69 -199 minecraft:smooth_quartz
 fill 188 69 -201 188 69 -199 minecraft:smooth_quartz
 
 effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 0 true
+execute as @e[tag=true] store result score @s obj run scoreboard players add $id obj 1

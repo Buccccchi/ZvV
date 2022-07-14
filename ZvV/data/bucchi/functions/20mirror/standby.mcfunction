@@ -1,3 +1,6 @@
+team add nopush
+team modify nopush collisionRule never
+
 summon minecraft:marker 200 64 -200 {Tags: ["surface", "mirror"]}
 summon minecraft:marker 200 64 -200 {Tags: ["surface"]}
 #召喚
