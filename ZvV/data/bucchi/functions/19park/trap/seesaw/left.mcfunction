@@ -12,5 +12,5 @@ fill 108 66 -196 109 66 -196 minecraft:air
 summon minecraft:falling_block 106 65.75 -196 {Tags: ["seesaw"], NoGravity: 1b, Time: -2147483648, BlockState: {Name: "minecraft:oak_slab", Properties: {type: "top"}}}
 summon minecraft:falling_block 108 65.25 -196 {Tags: ["seesaw"], NoGravity: 1b, Time: -2147483648, BlockState: {Name: "minecraft:oak_slab", Properties: {type: "top"}}}
 summon minecraft:falling_block 109 65 -196 {Tags: ["seesaw"], NoGravity: 1b, Time: -2147483648, BlockState: {Name: "minecraft:oak_slab", Properties: {type: "top"}}}
-summon minecraft:shulker 109 -64 -196 {Tags: ["seesaw"], NoAI: 1b, Silent: 1b, Invulnerable: 1b, ActiveEffects: [{Id: 14b, Amplifier: 0b, Duration: 2147483647, ShowParticles: 0b}]}
+summon minecraft:shulker 109 -64 -196 {Tags: ["seesaw"], NoAI: 1b, Silent: 1b, Invulnerable: 1b, ActiveEffects: [{Id: 14, Amplifier: 0b, Duration: 2147483647, ShowParticles: 0b}]}
 teleport @e[tag=seesaw,type=minecraft:shulker] 109 65 -196
