@@ -1,3 +1,5 @@
+summon minecraft:marker 200 64 -200 {Tags: ["surface", "mirror"]}
+summon minecraft:marker 200 64 -200 {Tags: ["surface"]}
 #召喚
 scoreboard players set $standby obj 5
 summon minecraft:armor_stand 218 68 -201 {Tags: ["standby", "zombie"], Marker: 1b, Invisible: 1b, Invulnerable: 1b}
