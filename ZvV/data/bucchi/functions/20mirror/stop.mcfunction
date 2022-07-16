@@ -1,3 +1,6 @@
+scoreboard objectives remove id
+scoreboard objectives remove health
+
 kill @e[tag=!dontkill]
 scoreboard players reset * obj
 fill 212 69 -201 212 69 -199 minecraft:redstone_block

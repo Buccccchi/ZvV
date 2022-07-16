@@ -1,3 +1,5 @@
+scoreboard objectives add id dummy
+scoreboard objectives add health dummy
 team add nopush
 team modify nopush collisionRule never
 
