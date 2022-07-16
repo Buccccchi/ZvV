@@ -1,6 +1,6 @@
 #奈落
 kill @e[tag=!dontkill,x=50,y=-16,z=-250,dx=100,dy=16,dz=100]
-#鏡#
+#鏡
 execute if block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] if entity @e[tag=activate] run tag @e[tag=activate] remove activate
 execute unless block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] unless entity @e[tag=activate] run function bucchi:20mirror/trap/mirror/change
 execute as @e[tag=false] at @e[tag=true] if score @s obj = @e[distance=0,limit=1] obj run function bucchi:20mirror/trap/mirror/main
