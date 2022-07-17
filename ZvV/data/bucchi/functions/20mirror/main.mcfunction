@@ -28,3 +28,5 @@ execute if block 207 65 -207 minecraft:stone_pressure_plate[powered=true] run fi
 #カウント
 execute store result score ゾンビ count if entity @e[type=minecraft:zombie,tag=true]
 execute store result score 村人 count if entity @e[type=minecraft:villager,tag=true]
+
+scoreboard players add $経過tick count 1
