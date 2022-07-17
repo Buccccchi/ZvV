@@ -4,7 +4,6 @@ scoreboard objectives add block dummy
 team add nopush
 team modify nopush collisionRule never
 gamerule doFireTick true
-tag @a add stop
 
 summon minecraft:marker 200 64 -200 {Tags: ["surface", "mirror"]}
 summon minecraft:marker 200 64 -200 {Tags: ["surface"]}
