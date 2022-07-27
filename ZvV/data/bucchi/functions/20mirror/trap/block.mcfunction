@@ -1,5 +1,5 @@
 execute positioned as @e[tag=block,tag=fighter] if block ~ 66 ~ minecraft:air run summon minecraft:marker ~ 66 ~ {Tags: ["block", "count"]}
-execute positioned as @e[tag=block,tag=fighter] if block ~ 66 ~ minecraft:air run setblock ~ 66 ~ minecraft:blue_ice keep
+execute positioned as @e[tag=block,tag=fighter] if block ~ 66 ~ minecraft:air run setblock ~ 66 ~ minecraft:diamond_block keep
 scoreboard players add @e[tag=block] block 1
 execute positioned as @e[tag=count,scores={block=40..}] run setblock ~ ~ ~ minecraft:air destroy
 kill @e[tag=count,scores={block=40..}]
