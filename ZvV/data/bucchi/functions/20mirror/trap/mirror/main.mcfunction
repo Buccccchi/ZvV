@@ -3,7 +3,7 @@ tag @s add alive
 tag @e[tag=target] add alive
 #線対称移動
 execute rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing 200 ~ -200 positioned ^ ^ ^2000 rotated as @e[tag=mirror] run teleport @s ^ ^ ^1000
-execute positioned ^ ^ ^-1 rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing entity @e[tag=target] feet positioned ^ ^ ^2000 rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing entity @e[tag=target] feet positioned as @s run teleport @s ~ ~ ~ ~ ~
+execute positioned ^ ^ ^-1 rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing entity @e[tag=target] feet rotated ~ 0 positioned ^ ^ ^2000 rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing entity @e[tag=target] feet positioned as @s run teleport @s ~ ~ ~ ~ ~
 #体力
 execute unless score @s health = @e[tag=target,limit=1] health run function bucchi:20mirror/trap/mirror/health
 #重複
