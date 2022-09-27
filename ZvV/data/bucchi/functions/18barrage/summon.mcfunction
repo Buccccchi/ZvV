@@ -1,5 +1,5 @@
 loot replace block 0 16 0 container.0 loot bucchi:random/14
-execute positioned as @e[tag=standby,tag=zombie] run summon minecraft:zombie ~ ~ ~ {Attributes: [{Name: "minecraft:generic.max_health", Base: 100.0d}], Health: 100.0f, IsBaby: 0b}
+execute positioned as @e[tag=standby,tag=zombie] run summon minecraft:zombie ~ ~ ~ {Health: 100.0f, Attributes: [{Name: "minecraft:generic.max_health", Base: 100.0d}], IsBaby: 0b}
 execute if block 0 16 0 minecraft:furnace{Items: [{Count: 1b}]} positioned as @e[tag=standby,tag=villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:armorer", type: "minecraft:plains"}}
 execute if block 0 16 0 minecraft:furnace{Items: [{Count: 2b}]} positioned as @e[tag=standby,tag=villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:butcher", type: "minecraft:plains"}}
 execute if block 0 16 0 minecraft:furnace{Items: [{Count: 3b}]} positioned as @e[tag=standby,tag=villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:cartographer", type: "minecraft:plains"}}
