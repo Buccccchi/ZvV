@@ -2,6 +2,7 @@ scoreboard players add $trap obj 1
 execute if score $trap obj matches 1 run scoreboard players set $time obj 40
 execute if score $trap obj matches 1 run loot replace block 0 16 0 container.0 loot bucchi:random/2
 execute if score $trap obj matches 1 if block 0 16 0 minecraft:furnace{Items: [{Count: 1b}]} run tag @e[tag=main] add curveA
+#execute if score $trap obj matches 1 if predicate bucchi:random/50 run tag @e[tag=main] add curveA
 #移動開始
 execute if entity @e[tag=main,tag=curveA] run tag @e[tag=center2_4,tag=block,tag=!scale5] add curveA
 execute unless entity @e[tag=main,tag=curveA] run tag @e[tag=center2_4,tag=block,tag=!scale5] add curveB
