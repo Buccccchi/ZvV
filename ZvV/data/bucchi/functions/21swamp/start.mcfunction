@@ -6,4 +6,4 @@ setblock 200 66 -116 minecraft:redstone_block
 fill 214 69 -102 214 69 -98 minecraft:dirt
 fill 186 69 -102 186 69 -98 minecraft:dirt
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 0 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 0 true

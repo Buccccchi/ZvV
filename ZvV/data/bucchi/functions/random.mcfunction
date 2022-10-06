@@ -4,13 +4,13 @@
 
 ### キャリー付き乗算で乱数を更新する
 ## ax + c # $MWCMultiplier = 31,743
-scoreboard players operation $current random *= $multiplier random
-scoreboard players operation $current random += $carry random
-scoreboard players operation $carry random = $current random
+scoreboard players operation $Current Random *= $Multiplier Random
+scoreboard players operation $Current Random += $Carry Random
+scoreboard players operation $Carry Random = $Current Random
 ## x = (ax + c) % b # $MWCBase = 2^16 = 65536
-scoreboard players operation $current random %= $base random
+scoreboard players operation $Current Random %= $Base Random
 ## c = (ax + c) / b
-scoreboard players operation $carry random /= $base random
+scoreboard players operation $Carry Random /= $Base Random
 
 ### 値を返す
-scoreboard players get $current random
+scoreboard players get $Current Random

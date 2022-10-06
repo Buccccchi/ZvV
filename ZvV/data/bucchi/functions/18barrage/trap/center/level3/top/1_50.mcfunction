@@ -1,4 +1,4 @@
-execute if score $time obj matches 1 run function bucchi:18barrage/trap/center/level3/top/1
+execute if score $time Global matches 1 run function bucchi:18barrage/trap/center/level3/top/1
 execute at @e[tag=P1] positioned ~ 66 ~ run particle minecraft:dust 1 1 0 3 ^ ^ ^1.5 0 0 0 0 5 force
 execute at @e[tag=P2] positioned ~ 66 ~ run particle minecraft:happy_villager ^ ^ ^1 0.2 0.3 0.2 0 10 force
 execute at @e[tag=P1] run summon minecraft:armor_stand ^ ^ ^1.5 {Tags: ["center3_4A", "main", "position0_0", "block"], ArmorItems: [{}, {}, {}, {id: "minecraft:horn_coral_block", Count: 1b}], Invisible: 1b, Marker: 1b, NoBasePlate: 1b, Fire: 32767s, Pose: {Head: [180.0f, 0.0f, 0.0f], LeftLeg: [180.0f, 0.0f, 0.0f], RightLeg: [180.0f, 0.0f, 0.0f]}}

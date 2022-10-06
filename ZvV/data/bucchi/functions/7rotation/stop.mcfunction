@@ -1,5 +1,5 @@
-kill @e[tag=!dontkill]
-scoreboard players reset * obj
+kill @e[tag=!DontKill]
+scoreboard players reset * Global
 fill 112 69 -2 112 69 2 minecraft:redstone_block
 fill 88 69 -2 88 69 2 minecraft:redstone_block
 

@@ -7,4 +7,4 @@ setblock 200 66 -215 minecraft:redstone_block
 fill 212 69 -201 212 69 -199 minecraft:smooth_quartz
 fill 188 69 -201 188 69 -199 minecraft:smooth_quartz
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 1 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 1 true

@@ -1,10 +1,10 @@
 #中心の罠
-scoreboard players operation $center obj = @e[limit=1,sort=random,tag=corner,scores={obj=1..}] obj
-scoreboard players set @e[tag=corner] obj 0
-execute if score $center obj matches 1.. run function bucchi:18barrage/trap/center/main
+scoreboard players operation $center Global = @e[limit=1,sort=random,tag=corner,scores={Global=1..}] Global
+scoreboard players set @e[tag=corner] Global 0
+execute if score $center Global matches 1.. run function bucchi:18barrage/trap/center/main
 #加減速
-execute as @e[tag=change,scores={obj=1..}] at @s run teleport @s ~ ~ ~ ~ ~-1
-scoreboard players remove @e[tag=change,scores={obj=1..}] obj 1
+execute as @e[tag=change,scores={Global=1..}] at @s run teleport @s ~ ~ ~ ~ ~-1
+scoreboard players remove @e[tag=change,scores={Global=1..}] Global 1
 #等速
 execute as @e[tag=straight0.2] at @s run teleport @s ^ ^ ^0.2
 execute as @e[tag=straight0.3] at @s run teleport @s ^ ^ ^0.3

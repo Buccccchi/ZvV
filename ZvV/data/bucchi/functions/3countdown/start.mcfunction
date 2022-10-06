@@ -6,4 +6,4 @@ setblock -100 66 -14 minecraft:redstone_block
 fill -88 69 -2 -88 69 2 minecraft:black_concrete
 fill -112 69 -2 -112 69 2 minecraft:black_concrete
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 1 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 1 true

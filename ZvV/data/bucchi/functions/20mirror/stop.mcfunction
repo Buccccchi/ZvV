@@ -17,6 +17,6 @@ data modify block 209 65 -206 Items set value [{Slot: 0b, id: "minecraft:arrow",
 data modify block 206 65 -209 Items set value [{Slot: 0b, id: "minecraft:arrow", Count: 64b}, {Slot: 1b, id: "minecraft:arrow", Count: 64b}, {Slot: 2b, id: "minecraft:arrow", Count: 64b}, {Slot: 3b, id: "minecraft:arrow", Count: 64b}, {Slot: 4b, id: "minecraft:arrow", Count: 64b}, {Slot: 5b, id: "minecraft:arrow", Count: 64b}, {Slot: 6b, id: "minecraft:arrow", Count: 64b}, {Slot: 7b, id: "minecraft:arrow", Count: 64b}, {Slot: 8b, id: "minecraft:arrow", Count: 64b}]
 
 kill @e[tag=!dontkill]
-scoreboard players reset * obj
+scoreboard players reset * Global
 fill 212 69 -201 212 69 -199 minecraft:redstone_block
 fill 188 69 -201 188 69 -199 minecraft:redstone_block

@@ -6,4 +6,4 @@ setblock 100 65 -114 minecraft:redstone_block
 fill 112 69 -94 112 69 -90 minecraft:cut_sandstone
 fill 88 69 -110 88 69 -106 minecraft:cut_sandstone
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 1 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 1 true

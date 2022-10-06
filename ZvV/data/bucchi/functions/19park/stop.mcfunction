@@ -8,6 +8,6 @@ fill 105 66 -196 109 66 -196 minecraft:oak_slab
 fill 91 64 -209 94 64 -207 minecraft:sand
 
 kill @e[tag=!dontkill]
-scoreboard players reset * obj
+scoreboard players reset * Global
 fill 111 67 -201 111 68 -199 minecraft:oak_leaves[persistent=true]
 fill 89 69 -201 89 70 -199 minecraft:oak_leaves[persistent=true]

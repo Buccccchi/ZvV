@@ -9,7 +9,7 @@ execute unless block 200 65 -193 minecraft:heavy_weighted_pressure_plate[power=0
 execute if block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] if entity @e[tag=activate] run tag @e[tag=activate] remove activate
 execute unless block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] unless entity @e[tag=activate] run function bucchi:20mirror/trap/mirror/change
 tag @e[tag=alive] remove alive
-scoreboard players remove @e[tag=false,scores={obj=1..}] obj 1
+scoreboard players remove @e[tag=false,scores={Global=1..}] Global 1
 execute as @e[tag=false] at @e[tag=true] if score @s id = @e[distance=0,limit=1] id run function bucchi:20mirror/trap/mirror/main
 execute if entity @e[tag=false] run kill @e[tag=fighter,tag=!alive]
 execute positioned as @e[tag=false] run particle minecraft:dust 0.2 1.0 1.0 1.0 ~ ~2 ~ 0 0 0 0 0
@@ -30,5 +30,5 @@ execute if block 207 65 -207 minecraft:birch_pressure_plate[powered=true] run fi
 execute if block 207 65 -207 minecraft:birch_pressure_plate[powered=true] run fill 210 65 -206 206 65 -210 minecraft:stone replace minecraft:redstone_block
 kill @e[type=minecraft:arrow,nbt={inGround: 1b}]
 #カウント
-execute store result score ゾンビ count if entity @e[type=minecraft:zombie,tag=true]
-execute store result score 村人 count if entity @e[type=minecraft:villager,tag=true]
+execute store result score ゾンビ Count if entity @e[type=minecraft:zombie,tag=true]
+execute store result score 村人 Count if entity @e[type=minecraft:villager,tag=true]

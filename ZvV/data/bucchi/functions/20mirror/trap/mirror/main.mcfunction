@@ -7,7 +7,7 @@ execute positioned ^ ^ ^-1 rotated as @e[tag=mirror] positioned ^ ^ ^1000 facing
 #体力
 execute unless score @s health = @e[tag=target,limit=1] health run function bucchi:20mirror/trap/mirror/health
 #重複
-execute if entity @s[distance=..0.5] unless score @s obj matches 1.. run function bucchi:20mirror/trap/mirror/overlap
+execute if entity @s[distance=..0.5] unless score @s Global matches 1.. run function bucchi:20mirror/trap/mirror/overlap
 #ジャンプ
 execute unless block 200 65 -193 minecraft:heavy_weighted_pressure_plate[power=0] run function bucchi:20mirror/trap/mirror/jump
 
