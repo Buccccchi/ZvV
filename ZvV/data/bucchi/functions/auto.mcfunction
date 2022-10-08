@@ -9,7 +9,7 @@ scoreboard players operation $平均tick Count += $経過tick Count
 scoreboard players operation $平均秒数 Count = $平均tick Count
 scoreboard players operation $平均秒数 Count /= #20 Count
 scoreboard players set $経過tick Count 0
-function bucchi:20mirror/stop
-schedule function bucchi:20mirror/stop 1s append
-schedule function bucchi:20mirror/standby 2s append
-schedule function bucchi:20mirror/start 10s append
+function bucchi:21swamp/stop
+schedule function bucchi:21swamp/stop 1s append
+schedule function bucchi:21swamp/standby 2s append
+schedule function bucchi:21swamp/start 10s append

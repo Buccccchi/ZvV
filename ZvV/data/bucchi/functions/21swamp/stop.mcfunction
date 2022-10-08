@@ -1,4 +1,4 @@
-fill 199 64 -101 201 64 -99 minecraft:dirt replace #minecraft:mineable/shovel
+place template bucchi:21swamp 188 59 -112
 
 kill @e[tag=!DontKill]
 scoreboard players reset * Global

@@ -1,7 +1,7 @@
 execute store result score $Random Global run function bucchi:random
 scoreboard players set $Temp Global 14
 scoreboard players operation $Random Global %= $Temp Global
-execute positioned as @e[tag=Standby,tag=Zombie] run summon minecraft:zombie ~ ~ ~ {ArmorItems: [{id: "minecraft:stone", Count: 1b, tag: {Enchantments: [{id: "minecraft:depth_strider", lvl: 1s}]}}], IsBaby: 0b}
+execute positioned as @e[tag=Standby,tag=Zombie] run summon minecraft:zombie ~ ~ ~ {ArmorItems: [{id: "minecraft:stone", Count: 1b, tag: {Enchantments: [{id: "minecraft:depth_strider", lvl: 1s}]}}], Attributes: [{Name: "minecraft:generic.movement_speed", Base: 0.276d}], IsBaby: 0b}
 execute if score $Random Global matches 0 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {ArmorItems: [{id: "minecraft:stone", Count: 1b, tag: {Enchantments: [{id: "minecraft:depth_strider", lvl: 1s}]}}], Xp: -2147483648, VillagerData: {profession: "minecraft:armorer", type: "minecraft:swamp"}}
 execute if score $Random Global matches 1 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {ArmorItems: [{id: "minecraft:stone", Count: 1b, tag: {Enchantments: [{id: "minecraft:depth_strider", lvl: 1s}]}}], Xp: -2147483648, VillagerData: {profession: "minecraft:butcher", type: "minecraft:swamp"}}
 execute if score $Random Global matches 2 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {ArmorItems: [{id: "minecraft:stone", Count: 1b, tag: {Enchantments: [{id: "minecraft:depth_strider", lvl: 1s}]}}], Xp: -2147483648, VillagerData: {profession: "minecraft:cartographer", type: "minecraft:swamp"}}

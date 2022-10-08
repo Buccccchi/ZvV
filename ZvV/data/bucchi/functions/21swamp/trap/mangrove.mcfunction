@@ -1,0 +1,4 @@
+spreadplayers 208 -108 0 4 false @e[tag=Mangrove]
+execute unless entity @e[tag=Start] positioned as @e[tag=Mangrove] if block ~ 62 ~ minecraft:mangrove_leaves run summon minecraft:marker ~ 76 ~ {Tags: ["Start"]}
+execute if entity @e[tag=Start] positioned as @e[tag=Mangrove] positioned ~ 76 ~ rotated as @e[tag=Axis,sort=nearest,limit=2] positioned ^ ^ ^4 rotated as @e[tag=Axis,sort=nearest,limit=2] positioned ^ ^ ^2 rotated as @e[tag=Axis,sort=nearest,limit=2] positioned ^ ^ ^1 rotated as @e[tag=Axis,sort=nearest,limit=2] positioned ^ ^ ^0.5 if block ~ ~ ~ minecraft:mangrove_leaves run teleport @e[tag=Start] ~ ~-1.5 ~
+execute unless entity @e[tag=Start] run function bucchi:21swamp/trap/mangrove
