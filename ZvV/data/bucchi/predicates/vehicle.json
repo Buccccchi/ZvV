@@ -3,7 +3,7 @@
     "entity": "this",
     "predicate": {
         "vehicle": {
-            "nbt": "{Tags: [\"vehicle\"]}"
+            "nbt": "{Tags: [\"Vehicle\"]}"
         }
     }
 }

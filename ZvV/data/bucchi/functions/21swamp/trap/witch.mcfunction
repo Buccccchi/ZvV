@@ -4,7 +4,7 @@ scoreboard players set $Temp Global 7
 scoreboard players operation $Random Global %= $Temp Global
 execute if score $Random Global matches 0 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:strong_swiftness"}}}
 execute if score $Random Global matches 1 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:slowness"}}}
-execute if score $Random Global matches 2 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:strong_healing"}}}
+execute if score $Random Global matches 2 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:healing"}}}
 execute if score $Random Global matches 3 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:harming"}}}
 execute if score $Random Global matches 4 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:regeneration"}}}
 execute if score $Random Global matches 5 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:strength"}}}

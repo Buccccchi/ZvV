@@ -1,3 +1,8 @@
+gamerule mobGriefing false
+tag @a remove StopFrog
+tag @a remove StopKill
+tag @a remove StopSlime
+tag @a remove StopWitch
 place template bucchi:21swamp 188 59 -112
 
 kill @e[tag=!DontKill]
