@@ -15,6 +15,10 @@ summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
 summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
 summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
 summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
+summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
+summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
+summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
+summon minecraft:marker 200 66 -100 {Tags: ["Center"]}
 summon minecraft:marker 0.0 0 0.0 {Tags: ["Rotation"]}
 summon minecraft:marker 200 62 -100 {Tags: ["Axis"], Rotation: [0.0f, -90.0f]}
 summon minecraft:marker 200 61 -100 {Tags: ["Axis"], Rotation: [180.0f, 90.0f]}
