@@ -1,3 +1,3 @@
-tag @s remove center1_2
-tag @s add straight0.5
-tag @s add barrage
+tag @s remove Center1_2
+tag @s add Straight0.5
+tag @s add Barrage

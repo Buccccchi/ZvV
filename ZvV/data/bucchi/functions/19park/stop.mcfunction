@@ -1,4 +1,4 @@
-team remove park
+team remove Park
 execute as @e[type=minecraft:turtle] run data remove entity @s Leash
 schedule clear bucchi:19park/trap/seesaw/left
 schedule clear bucchi:19park/trap/seesaw/right

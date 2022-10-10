@@ -1,26 +1,26 @@
-#中心の罠
-scoreboard players operation $center Global = @e[limit=1,sort=random,tag=corner,scores={Global=1..}] Global
-scoreboard players set @e[tag=corner] Global 0
-execute if score $center Global matches 1.. run function bucchi:18barrage/trap/center/main
-#加減速
-execute as @e[tag=change,scores={Global=1..}] at @s run teleport @s ~ ~ ~ ~ ~-1
-scoreboard players remove @e[tag=change,scores={Global=1..}] Global 1
-#等速
-execute as @e[tag=straight0.2] at @s run teleport @s ^ ^ ^0.2
-execute as @e[tag=straight0.3] at @s run teleport @s ^ ^ ^0.3
-execute as @e[tag=straight0.5] at @s run teleport @s ^ ^ ^0.5
-execute as @e[tag=right0.3] at @s run teleport @s ^0.3 ^ ^
-execute as @e[tag=left0.3] at @s run teleport @s ^-0.3 ^ ^
-execute as @e[tag=scale3A] at @s positioned ^ ^ ^3 run teleport @s ~ 65 ~
-execute as @e[tag=scale3B] at @s positioned ^ ^ ^3 run teleport @s ~ 65.5 ~
-execute as @e[tag=scale3C] at @s positioned ^ ^ ^3 run teleport @s ~ 63.49 ~
-execute as @e[tag=scale5] at @s positioned ^ ^ ^5 run teleport @s ~ 65 ~
-#曲線
-execute as @e[tag=curveA] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~2.7 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~2.7 ~
-execute as @e[tag=curveB] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~-2.7 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~-2.7 ~
-execute as @e[tag=curveC] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~1 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~1 ~
-execute as @e[tag=curveD] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~-1 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~-1 ~
-#反射
-execute as @e[tag=reflect] at @s unless block ~ 66 ~ minecraft:air if block 0 66 ~ minecraft:air positioned ^ ^ ^-1 positioned ~ ~ ~-100 facing entity @s feet positioned ^ ^ ^200 positioned ~ ~ ~-100 facing entity @s feet positioned as @s run teleport @s ~ ~ ~ ~ 0
-#kill
-execute as @e[tag=barrage] positioned as @s if block ~ 64 ~ minecraft:air run kill @s
+# 中心の罠
+scoreboard players operation $Center Global = @e[tag=Corner,scores={Global=1..},sort=random,limit=1] Global
+scoreboard players set @e[tag=Corner] Global 0
+execute if score $Center Global matches 1.. run function bucchi:18barrage/trap/center/main
+# 加減速
+execute as @e[tag=Change,scores={Global=1..}] at @s run teleport @s ~ ~ ~ ~ ~-1
+scoreboard players remove @e[tag=Change,scores={Global=1..}] Global 1
+# 等速
+execute as @e[tag=Straight0.2] at @s run teleport @s ^ ^ ^0.2
+execute as @e[tag=Straight0.3] at @s run teleport @s ^ ^ ^0.3
+execute as @e[tag=Straight0.5] at @s run teleport @s ^ ^ ^0.5
+execute as @e[tag=Right0.3] at @s run teleport @s ^0.3 ^ ^
+execute as @e[tag=Left0.3] at @s run teleport @s ^-0.3 ^ ^
+execute as @e[tag=Scale3A] at @s positioned ^ ^ ^3 run teleport @s ~ 65 ~
+execute as @e[tag=Scale3B] at @s positioned ^ ^ ^3 run teleport @s ~ 65.5 ~
+execute as @e[tag=Scale3C] at @s positioned ^ ^ ^3 run teleport @s ~ 63.49 ~
+execute as @e[tag=Scale5] at @s positioned ^ ^ ^5 run teleport @s ~ 65 ~
+# 曲線
+execute as @e[tag=CurveA] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~2.7 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~2.7 ~
+execute as @e[tag=CurveB] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~-2.7 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~-2.7 ~
+execute as @e[tag=CurveC] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~1 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~1 ~
+execute as @e[tag=CurveD] positioned as @s positioned 0 80 -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 positioned 0 ~ -200 facing entity @s feet positioned as @s positioned ^ ^ ^-30 rotated ~-1 ~ positioned ^ ^ ^30 rotated as @s run teleport @s ~ ~ ~ ~-1 ~
+# 反射
+execute as @e[tag=Reflect] at @s unless block ~ 66 ~ minecraft:air if block 0 66 ~ minecraft:air positioned ^ ^ ^-1 positioned ~ ~ ~-100 facing entity @s feet positioned ^ ^ ^200 positioned ~ ~ ~-100 facing entity @s feet positioned as @s run teleport @s ~ ~ ~ ~ 0
+# kill
+execute as @e[tag=Barrage] positioned as @s if block ~ 64 ~ minecraft:air run kill @s

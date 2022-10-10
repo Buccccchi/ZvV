@@ -1,8 +1,8 @@
-execute if score @s health > @e[tag=target,limit=1] health run tag @s add damage
-execute if score @s health < @e[tag=target,limit=1] health run tag @e[tag=target] add damage
-scoreboard players operation @s health < @e[tag=target,limit=1] health
-scoreboard players operation @e[tag=target,limit=1] health < @s health
-scoreboard players add @e[tag=damage] health 100
-execute as @e[tag=damage] store result entity @s Health float 0.01 run scoreboard players get @s health
-effect give @e[tag=damage] minecraft:wither 1 1 true
-tag @e[tag=damage] remove damage
+execute if score @s Health > @e[tag=Target,limit=1] Health run tag @s add Damage
+execute if score @s Health < @e[tag=Target,limit=1] Health run tag @e[tag=Target] add Damage
+scoreboard players operation @s Health < @e[tag=Target,limit=1] Health
+scoreboard players operation @e[tag=Target,limit=1] Health < @s Health
+scoreboard players add @e[tag=Damage] Health 100
+execute as @e[tag=Damage] store result entity @s Health float 0.01 run scoreboard players get @s Health
+effect give @e[tag=Damage] minecraft:wither 1 1 true
+tag @e[tag=Damage] remove Damage

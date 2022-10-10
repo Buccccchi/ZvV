@@ -1,10 +1,10 @@
-scoreboard objectives remove id
-scoreboard objectives remove health
-scoreboard objectives remove jump
-scoreboard objectives remove block
-team remove nopush
+scoreboard objectives remove ID
+scoreboard objectives remove Health
+scoreboard objectives remove Jump
+scoreboard objectives remove Block
+team remove NoPush
 gamerule doFireTick false
-tag @a remove stop
+tag @a remove StopCount
 
 setblock 200 66 -214 minecraft:stone
 setblock 208 65 -192 minecraft:smooth_quartz_slab
@@ -16,7 +16,7 @@ data modify block 194 65 -191 Items set value [{Slot: 0b, id: "minecraft:fire_ch
 data modify block 209 65 -206 Items set value [{Slot: 0b, id: "minecraft:arrow", Count: 64b}, {Slot: 1b, id: "minecraft:arrow", Count: 64b}, {Slot: 2b, id: "minecraft:arrow", Count: 64b}, {Slot: 3b, id: "minecraft:arrow", Count: 64b}, {Slot: 4b, id: "minecraft:arrow", Count: 64b}, {Slot: 5b, id: "minecraft:arrow", Count: 64b}, {Slot: 6b, id: "minecraft:arrow", Count: 64b}, {Slot: 7b, id: "minecraft:arrow", Count: 64b}, {Slot: 8b, id: "minecraft:arrow", Count: 64b}]
 data modify block 206 65 -209 Items set value [{Slot: 0b, id: "minecraft:arrow", Count: 64b}, {Slot: 1b, id: "minecraft:arrow", Count: 64b}, {Slot: 2b, id: "minecraft:arrow", Count: 64b}, {Slot: 3b, id: "minecraft:arrow", Count: 64b}, {Slot: 4b, id: "minecraft:arrow", Count: 64b}, {Slot: 5b, id: "minecraft:arrow", Count: 64b}, {Slot: 6b, id: "minecraft:arrow", Count: 64b}, {Slot: 7b, id: "minecraft:arrow", Count: 64b}, {Slot: 8b, id: "minecraft:arrow", Count: 64b}]
 
-kill @e[tag=!dontkill]
+kill @e[tag=!DontKill]
 scoreboard players reset * Global
 fill 212 69 -201 212 69 -199 minecraft:redstone_block
 fill 188 69 -201 188 69 -199 minecraft:redstone_block

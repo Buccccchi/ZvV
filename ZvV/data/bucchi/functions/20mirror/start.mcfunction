@@ -7,7 +7,7 @@ setblock 200 66 -215 minecraft:redstone_block
 fill 212 69 -201 212 69 -199 minecraft:smooth_quartz
 fill 188 69 -201 188 69 -199 minecraft:smooth_quartz
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 1 true
-execute as @e[tag=true] store result score @s id run scoreboard players add $id id 1
-scoreboard players set @e[tag=true,type=minecraft:zombie] jump 0
-tag @a add stop
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 1 true
+execute as @e[tag=True] store result score @s ID run scoreboard players add $ID ID 1
+scoreboard players set @e[tag=True,type=minecraft:zombie] Jump 0
+tag @a add StopCount

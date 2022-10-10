@@ -1,6 +1,6 @@
-#窒息ブロック他
+# 窒息ブロック他
 execute if score 村人 Count matches 7 run function bucchi:3countdown/trap/7
-#村人減少時の処理
+# 村人減少時の処理
 execute if score 村人 Count matches 9 unless block -100 64 0 minecraft:light_blue_concrete run clone -110 56 -10 -90 57 10 -110 64 -10
 execute if score 村人 Count matches 8 unless block -100 64 0 minecraft:green_concrete run clone -110 54 -10 -90 55 10 -110 64 -10
 execute if score 村人 Count matches 7 unless block -100 64 0 minecraft:lime_concrete run clone -110 52 -10 -90 53 10 -110 64 -10
@@ -15,6 +15,6 @@ execute if score 村人 Count matches 1 unless block -100 64 0 minecraft:purple_
 execute if score 村人 Count matches 1 unless block -100 64 0 minecraft:purple_concrete run kill @e[x=-101,y=67,z=11,dx=2,dy=2,dz=2]
 execute if score 村人 Count matches 1 unless block -100 64 0 minecraft:purple_concrete run clone -110 40 -10 -90 41 10 -110 64 -10
 execute if score 村人 Count matches 0 run clone -110 38 -10 -90 39 10 -110 64 -10
-#試合終了
+# 試合終了
 execute if score ゾンビ Count matches 0 run function bucchi:end
 execute if score 村人 Count matches 0 if block ~ ~-1 ~ minecraft:redstone_block run function bucchi:end

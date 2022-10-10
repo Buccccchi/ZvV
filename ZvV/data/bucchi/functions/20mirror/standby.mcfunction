@@ -1,15 +1,15 @@
-scoreboard objectives add id dummy
-scoreboard objectives add health dummy
-scoreboard objectives add jump dummy
-scoreboard objectives add block dummy
-team add nopush
-team modify nopush collisionRule never
+scoreboard objectives add ID dummy
+scoreboard objectives add Health dummy
+scoreboard objectives add Jump dummy
+scoreboard objectives add Block dummy
+team add NoPush
+team modify NoPush collisionRule never
 gamerule doFireTick true
 
-summon minecraft:marker 200 64 -200 {Tags: ["surface", "mirror"]}
-summon minecraft:marker 200 64 -200 {Tags: ["surface"]}
-#召喚
-scoreboard players set $standby Global 10
-summon minecraft:armor_stand 218 68 -201 {Tags: ["standby", "zombie"], Marker: 1b, Invisible: 1b, Invulnerable: 1b}
-summon minecraft:armor_stand 182 68 -201 {Tags: ["standby", "villager"], Marker: 1b, Invisible: 1b, Invulnerable: 1b}
+summon minecraft:marker 200 64 -200 {Tags: ["Surface", "Mirror"]}
+summon minecraft:marker 200 64 -200 {Tags: ["Surface"]}
+# 召喚
+scoreboard players set $Standby Global 10
+summon minecraft:marker 218 68 -201 {Tags: ["Standby", "Zombie"]}
+summon minecraft:marker 182 68 -201 {Tags: ["Standby", "Villager"]}
 function bucchi:20mirror/summon

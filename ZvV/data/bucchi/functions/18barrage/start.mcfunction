@@ -7,7 +7,7 @@ setblock 0 66 -217 minecraft:redstone_block
 fill 14 69 -202 14 69 -198 minecraft:black_concrete
 fill -14 69 -202 -14 69 -198 minecraft:black_concrete
 
-effect give @e[type=minecraft:zombie,tag=!dontkill] minecraft:speed 1000000 2 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 2 true
 bossbar add bucchi:level {"text": "Level 1", "color": "aqua"}
 bossbar set bucchi:level color blue
 bossbar set bucchi:level max 10
