@@ -14,7 +14,7 @@ execute if score $Random Global matches 6 positioned as @e[tag=Witch] run summon
 #scoreboard players operation $Random Global %= $Temp Global
 #execute store result entity @e[tag=Rotation,limit=1] Rotation[0] float 1 run scoreboard players get $Random Global
 #execute positioned 0.0 0 0.0 rotated as @e[tag=Rotation] run teleport @e[tag=Rotation] ^ ^ ^0.8
-execute as @e[tag=Rotation] positioned as @e[tag=Witch] facing entity @e[tag=Fighter,sort=nearest,limit=1] feet rotated ~ 0 positioned 0.0 0 0.0 run teleport @s ^ ^ ^0.5
+execute as @e[tag=Rotation] positioned as @e[tag=Witch] facing entity @e[tag=Fighter,sort=nearest,limit=1] feet rotated ~ 0 positioned 0.0 0 0.0 run teleport @s ^ ^ ^0.8
 data modify entity @e[tag=Potion,limit=1] Motion set from entity @e[tag=Rotation,limit=1] Pos
 tag @e[tag=Potion] remove Potion
 # 繰り返し防止
