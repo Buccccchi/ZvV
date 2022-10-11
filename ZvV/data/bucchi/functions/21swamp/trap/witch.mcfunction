@@ -1,7 +1,6 @@
 # 召喚
-execute store result score $Random Global run function bucchi:random
-scoreboard players set $Temp Global 7
-scoreboard players operation $Random Global %= $Temp Global
+scoreboard players set $RandMax Global 7
+function bucchi:random
 execute if score $Random Global matches 0 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:swiftness"}}}
 execute if score $Random Global matches 1 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:slowness"}}}
 execute if score $Random Global matches 2 positioned as @e[tag=Witch] run summon minecraft:potion ~ ~1 ~ {Tags: ["Potion"], Fire: 2s, Item: {id: "minecraft:splash_potion", Count: 1b, tag: {Potion: "minecraft:healing"}}}

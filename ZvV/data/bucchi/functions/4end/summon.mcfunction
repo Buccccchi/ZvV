@@ -1,6 +1,5 @@
-execute store result score $Random Global run function bucchi:random
-scoreboard players set $Temp Global 14
-scoreboard players operation $Random Global %= $Temp Global
+scoreboard players set $RandMax Global 14
+function bucchi:random
 execute positioned as @e[tag=Standby,tag=Zombie] run summon minecraft:zombie ~ ~ ~ {IsBaby: 0b}
 execute if score $Random Global matches 0 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:armorer", type: "minecraft:plains"}}
 execute if score $Random Global matches 1 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:butcher", type: "minecraft:plains"}}

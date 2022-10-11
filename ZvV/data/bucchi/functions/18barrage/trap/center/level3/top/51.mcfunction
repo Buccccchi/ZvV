@@ -1,4 +1,4 @@
-execute if entity @s[tag=center3_4A] run summon minecraft:armor_stand ~ 60 ~ {Tags: ["center3_4A", "center3_4", "block"], ArmorItems: [{}, {}, {}, {id: "minecraft:horn_coral_block", Count: 1b}], Invisible: 1b, Marker: 1b, NoBasePlate: 1b, Fire: 32767s, Pose: {Head: [180.0f, 0.0f, 0.0f], LeftLeg: [180.0f, 0.0f, 0.0f], RightLeg: [180.0f, 0.0f, 0.0f]}}
-execute if entity @s[tag=center3_4B] run summon minecraft:armor_stand ~ 60 ~ {Tags: ["center3_4B", "center3_4", "small_block"], ArmorItems: [{}, {}, {}, {id: "minecraft:lime_concrete_powder", Count: 1b}], Small: 1b, Invisible: 1b, Marker: 1b, NoBasePlate: 1b, Fire: 32767s, Pose: {Head: [180.0f, 0.0f, 0.0f], LeftLeg: [180.0f, 0.0f, 0.0f], RightLeg: [180.0f, 0.0f, 0.0f]}}
-teleport @e[tag=!barrage,tag=center3_4] ~ ~-3 ~ ~ ~
-tag @e[tag=!barrage,tag=center3_4] add barrage
+execute if entity @s[tag=Center3_4A] run summon minecraft:armor_stand ~ 60 ~ {Tags: ["Center3_4A", "Center3_4", "Block"], ArmorItems: [{}, {}, {}, {id: "minecraft:horn_coral_block", Count: 1b}], Invisible: 1b, Marker: 1b, NoBasePlate: 1b, Fire: 32767s, Pose: {Head: [180.0f, 0.0f, 0.0f], LeftLeg: [180.0f, 0.0f, 0.0f], RightLeg: [180.0f, 0.0f, 0.0f]}}
+execute if entity @s[tag=Center3_4B] run summon minecraft:armor_stand ~ 60 ~ {Tags: ["Center3_4B", "Center3_4", "SmallBlock"], ArmorItems: [{}, {}, {}, {id: "minecraft:lime_concrete_powder", Count: 1b}], Small: 1b, Invisible: 1b, Marker: 1b, NoBasePlate: 1b, Fire: 32767s, Pose: {Head: [180.0f, 0.0f, 0.0f], LeftLeg: [180.0f, 0.0f, 0.0f], RightLeg: [180.0f, 0.0f, 0.0f]}}
+teleport @e[tag=!Barrage,tag=Center3_4] ~ ~-3 ~ ~ ~
+tag @e[tag=!Barrage,tag=Center3_4] add Barrage

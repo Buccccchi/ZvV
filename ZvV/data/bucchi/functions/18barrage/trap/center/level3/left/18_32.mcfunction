@@ -1,3 +1,3 @@
-scoreboard players add @e[tag=!barrage,tag=center3_2] obj 1
-tag @e[tag=!barrage,tag=center3_2,scores={obj=9}] add straight0.5
-tag @e[tag=!barrage,tag=center3_2,scores={obj=9}] add barrage
+scoreboard players add @e[tag=!Barrage,tag=Center3_2] Global 1
+tag @e[tag=!Barrage,tag=Center3_2,scores={Global=9}] add Straight0.5
+tag @e[tag=!Barrage,tag=Center3_2,scores={Global=9}] add Barrage

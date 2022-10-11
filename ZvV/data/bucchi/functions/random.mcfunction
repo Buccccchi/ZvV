@@ -13,4 +13,5 @@ scoreboard players operation $Current Random %= #65536 Random
 scoreboard players operation $Carry Random /= #65536 Random
 
 ### 値を返す
-scoreboard players get $Current Random
+scoreboard players operation $Random Global = $Current Random
+scoreboard players operation $Random Global %= $RandMax Global

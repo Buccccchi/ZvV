@@ -1,3 +1,3 @@
-tag @s add scale3C
-tag @s add change
-scoreboard players set @s obj 10
+tag @s add Scale3C
+tag @s add Change
+scoreboard players set @s Global 10
