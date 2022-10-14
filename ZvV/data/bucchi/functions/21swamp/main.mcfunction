@@ -16,8 +16,7 @@ execute if block 192 65 -104 minecraft:spruce_pressure_plate[powered=false] if e
 # スライムボール
 execute positioned as @e[tag=Death,predicate=!bucchi:vehicle] run summon minecraft:item ~ ~ ~ {Tags: ["SlimeBall"], Item: {id: "minecraft:slime_ball", Count: 1b}}
 kill @e[tag=Death,predicate=!bucchi:vehicle]
-execute if entity @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] run effect give @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] minecraft:instant_health
-execute if entity @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] as @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] run data remove entity @s HandItems[0]
+execute if entity @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] as @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] run function bucchi:21swamp/trap/ball
 execute positioned as @e[tag=SlimeBall] if predicate bucchi:random/20 run particle minecraft:dust 0.2 1.0 0.2 1.0 ~ ~1 ~ 0 0 0 0 0 force
 # ウィッチ
 execute if block 190 67 -91 minecraft:oak_pressure_plate[powered=true] unless entity @e[tag=StopWitch] run function bucchi:21swamp/trap/witch
@@ -29,10 +28,7 @@ execute if entity @e[tag=Start] run kill @e[tag=Start]
 execute positioned as @e[tag=Propagule] run effect give @e[type=minecraft:zombie,distance=..1] minecraft:wither 1 1 true
 # キノコ
 effect give @e[type=minecraft:zombie,x=196.5,y=65,z=-88.5,distance=..1] minecraft:wither 10 0
+execute positioned as @e[type=minecraft:zombie,x=196.5,y=65,z=-88.5,distance=..1] run particle minecraft:soul ~ ~0.8 ~ 0.2 0.5 0.2 0 1
 # 試合終了
 execute if score ゾンビ Count matches 0 run function bucchi:end
 execute if score 村人 Count matches 0 if block ~ ~-1 ~ minecraft:redstone_block run function bucchi:end
-
-scoreboard players add $経過tick Count 1
-execute if score $経過tick Count matches 6000.. run function bucchi:21swamp/stop
-execute if score $経過tick Count matches 6000.. run scoreboard players operation $経過tick Count = $平均tick Count

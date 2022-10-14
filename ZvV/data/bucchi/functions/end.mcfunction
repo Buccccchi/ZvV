@@ -6,4 +6,4 @@ execute unless score 村人 Count matches 0 if score ゾンビ Count matches 0 r
 execute if score ゾンビ Count matches 0 if score 村人 Count matches 0 run title @a times 10 40 10
 execute if score ゾンビ Count matches 0 if score 村人 Count matches 0 run title @a title {"text": "引き分け", "color": "yellow", "bold": true}
 setblock ~ ~-1 ~ minecraft:stone
-function bucchi:auto
+#function bucchi:auto
