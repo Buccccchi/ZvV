@@ -1,5 +1,5 @@
-scoreboard players set $RandMax Global 5
-function bucchi:random
+# 動物召喚
+execute store result score $Random Global run random value 0..4
 execute if score $Random Global matches 0 run summon minecraft:cow -8 65 92 {Tags: ["Animal"]}
 execute if score $Random Global matches 1 run summon minecraft:pig -8 65 92 {Tags: ["Animal"]}
 execute if score $Random Global matches 2 run summon minecraft:sheep -8 65 92 {Tags: ["Animal"]}

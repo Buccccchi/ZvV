@@ -4,6 +4,7 @@ effect give @e[type=minecraft:zombie,x=5.5,y=65,z=90.5,dx=5,dy=2,dz=5] minecraft
 execute if entity @e[type=minecraft:zombie,x=5.5,y=65,z=90.5,dx=5,dy=2,dz=5] if entity @e[tag=Kakashi] unless score $Kakashi Global matches 0..9 run scoreboard players set $Kakashi Global 0
 execute if score $Kakashi Global matches 0..9 run function bucchi:1survival/trap/kakashi
 kill @e[type=minecraft:arrow,nbt={inGround: 1b}]
+
 # 試合終了
 execute if score ゾンビ Count matches 0 run function bucchi:end
 execute if score 村人 Count matches 0 if block ~ ~-1 ~ minecraft:redstone_block run function bucchi:end
