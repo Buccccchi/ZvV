@@ -1,5 +1,5 @@
-scoreboard players set $RandMax Global 14
-function bucchi:random
+# 召喚
+execute store result score $Random Global run random value 0..13
 #Tags:[], Health: 40.0f, Attributes: [{Name: "minecraft:generic.max_health", Base: 40.0d}],
 execute positioned as @e[tag=Standby,tag=Zombie] run summon minecraft:zombie ~ ~ ~ {IsBaby: 0b}
 execute if score $Random Global matches 0 positioned as @e[tag=Standby,tag=Villager] run summon minecraft:villager ~ ~ ~ {Xp: -2147483648, VillagerData: {profession: "minecraft:armorer", type: "minecraft:plains"}}

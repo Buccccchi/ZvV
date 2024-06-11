@@ -10,6 +10,10 @@ execute as @e[type=minecraft:chest_minecart] positioned as @s if block ~ ~ ~ min
 kill @e[type=minecraft:zombie,tag=!DontKill,x=89,y=86,z=89,dx=22,dy=10,dz=22]
 execute if entity @e[type=minecraft:tnt_minecart,nbt={TNTFuse: 1}] run fill 100 64 105 100 64 108 minecraft:air
 teleport @e[type=minecraft:tnt_minecart,nbt={TNTFuse: 1}] 100 65 106.0
+
 # 試合終了
-execute if score ゾンビ Count matches 0 run function bucchi:end
-execute if score 村人 Count matches 0 if block ~ ~-1 ~ minecraft:redstone_block run function bucchi:end
+execute if score ゾンビ Count matches 0 run function bucchi:end {"stage": "8factory"}
+execute if score 村人 Count matches 0 if block ~ ~-1 ~ minecraft:redstone_block run function bucchi:end {"stage": "8factory"}
+
+# 自動バランス確認用
+#scoreboard players add $経過tick Count 1

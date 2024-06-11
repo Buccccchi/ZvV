@@ -1,3 +1,4 @@
+# 試合開始
 gamemode spectator @a
 title @a times 10 30 20
 title @a subtitle {"text": "工場ステージ", "italic": true}
@@ -6,4 +7,4 @@ setblock 100 66 86 minecraft:redstone_block
 fill 112 69 98 112 69 102 minecraft:iron_block
 fill 88 69 98 88 69 102 minecraft:iron_block
 
-effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed 1000000 0 true
+effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed infinite 0 true

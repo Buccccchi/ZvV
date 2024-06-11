@@ -1,3 +1,4 @@
+# 村人勝利時のタイトル表示
 scoreboard players operation $Title Title += $Add Title
 execute if score $Title Title matches 0 run title @a title ""
 execute if score $Title Title matches 1 run title @a title [{"text": "勝者                      ", "color": "yellow", "bold": true}, {"text": "村人", "color": "gold"}]
