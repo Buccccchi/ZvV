@@ -1,4 +1,12 @@
+#> bucchi:2nether/trap/fire1/end
+#
 # 発火終了（左）
-setblock -94 64 94 minecraft:heavy_weighted_pressure_plate
-tag @e[tag=Fire1] remove Fire
-tag @e[tag=Fire1] remove Fire1
+#
+# @within function bucchi:2nether/trap/fire1/start
+
+# 感圧板を再設置
+    setblock -94 64 94 minecraft:heavy_weighted_pressure_plate
+
+# タグ Fire と Fire1 を消去
+    tag @e[tag=Fire1] remove Fire
+    tag @e[tag=Fire1] remove Fire1

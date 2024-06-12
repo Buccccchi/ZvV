@@ -1,4 +1,11 @@
-# エフェクト
+#> bucchi:3countdown/trap/effect
+#
+# カウント別にエフェクトを付与
+#
+# @input score 村人 Count
+#   村人の残りの数
+# @private
+
 execute if score 村人 Count matches 10 run effect give @s[type=minecraft:villager] minecraft:fire_resistance 10 0
 execute if score 村人 Count matches 9 run effect give @s[type=minecraft:zombie] minecraft:levitation 5 1
 execute if score 村人 Count matches 8 run effect give @s[type=minecraft:villager] minecraft:resistance 10 1

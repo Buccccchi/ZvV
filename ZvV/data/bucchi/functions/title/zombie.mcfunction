@@ -1,4 +1,11 @@
+#> bucchi:title/villager
+#
 # ゾンビ勝利時のタイトル表示
+#
+# @input score $Add Title
+#   タイトル表示開始時: 1, タイトル表示終了時: -1
+# @within function bucchi:end
+
 scoreboard players operation $Title Title += $Add Title
 execute if score $Title Title matches 0 run title @a title ""
 execute if score $Title Title matches 1 run title @a title [{"text": "勝者                      ", "color": "yellow", "bold": true}, {"text": "ゾンビ", "color": "green"}]
