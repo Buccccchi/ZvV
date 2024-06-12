@@ -1,5 +1,6 @@
 #> bucchi:2nether/trap/magma/end
 #
+# ネザーステージ
 # マグマブロック融解終了
 #
 # @within function bucchi:2nether/trap/magma/start

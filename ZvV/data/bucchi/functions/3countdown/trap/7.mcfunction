@@ -1,5 +1,6 @@
 #> bucchi:3countdown/trap/7
 #
+# カウントダウンステージ
 # カウント7時の処理
 #
 # @within function bucchi:3countdown/main

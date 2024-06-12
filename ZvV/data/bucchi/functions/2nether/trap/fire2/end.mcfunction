@@ -1,5 +1,6 @@
 #> bucchi:2nether/trap/fire2/end
 #
+# ネザーステージ
 # 発火終了（右）
 #
 # @within function bucchi:2nether/trap/fire2/start

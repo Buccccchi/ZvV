@@ -1,6 +1,7 @@
 #> bucchi:2nether/summon
 #
-# 召喚するゾンビと村人
+# ネザーステージ
+# ゾンビと村人を召喚
 #
 # @input score $Standby Global
 #   ゾンビと村人の召喚数

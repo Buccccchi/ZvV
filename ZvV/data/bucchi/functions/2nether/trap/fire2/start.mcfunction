@@ -1,5 +1,6 @@
 #> bucchi:2nether/trap/fire2/start
 #
+# ネザーステージ
 # 発火開始（右）
 #
 # @private

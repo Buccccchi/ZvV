@@ -1,4 +1,4 @@
-#> bucchi:1survival/main
+#> bucchi:1survival/stop
 #
 # サバイバルステージ
 # 試合後の処理

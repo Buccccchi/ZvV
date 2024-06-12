@@ -1,5 +1,6 @@
 #> bucchi:2nether/trap/center
 #
+# ネザーステージ
 # 中央の罠
 #
 # @private

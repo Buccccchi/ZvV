@@ -1,5 +1,6 @@
 #> bucchi:3countdown/trap/effect
 #
+# カウントダウンステージ
 # カウント別にエフェクトを付与
 #
 # @input score 村人 Count

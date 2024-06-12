@@ -1,6 +1,7 @@
 #> bucchi:1survival/summon
 #
-# 召喚するゾンビと村人
+# サバイバルステージ
+# ゾンビと村人を召喚
 #
 # @input score $Standby Global
 #   ゾンビと村人の召喚数

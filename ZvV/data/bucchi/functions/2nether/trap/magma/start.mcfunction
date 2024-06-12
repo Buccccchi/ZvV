@@ -1,5 +1,6 @@
 #> bucchi:2nether/trap/magma/start
 #
+# ネザーステージ
 # マグマブロック融解開始
 #
 # @private

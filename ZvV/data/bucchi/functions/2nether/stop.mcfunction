@@ -1,4 +1,4 @@
-#> bucchi:2nether/main
+#> bucchi:2nether/stop
 #
 # ネザーステージ
 # 試合後の処理

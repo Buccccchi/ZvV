@@ -1,4 +1,4 @@
-#> bucchi:3countdown/main
+#> bucchi:3countdown/stop
 #
 # カウントダウンステージ
 # 試合後の処理
