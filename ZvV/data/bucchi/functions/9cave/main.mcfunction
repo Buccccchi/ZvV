@@ -13,6 +13,10 @@
     execute if entity @e[tag=Creeper,scores={Global=29}] run fill 98 63 198 102 63 202 minecraft:air replace minecraft:dirt
     execute if entity @e[tag=Creeper,scores={Global=29}] run particle minecraft:explosion 100 64 200 1.5 1.5 1.5 0 50 force
 
+# 水流
+    execute if block 107 67 207 minecraft:heavy_weighted_pressure_plate[power=0] run setblock 102 63 210 minecraft:stone
+    execute unless block 107 67 207 minecraft:heavy_weighted_pressure_plate[power=0] run setblock 102 63 210 minecraft:redstone_block
+
 # コウモリ
     scoreboard players add @e[tag=Bat] Global 1
     execute if entity @e[tag=Bat,scores={Global=100}] as @e[tag=Bat,scores={Global=100}] positioned as @s run summon minecraft:potion ~ ~ ~ {Item: {id: "minecraft:splash_potion", count: 1, components: {"minecraft:potion_contents": {potion: "minecraft:healing"}}}}

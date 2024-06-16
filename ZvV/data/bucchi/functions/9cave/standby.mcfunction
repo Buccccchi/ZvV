@@ -5,6 +5,10 @@
 #
 # @private
 
+# 暗視エフェクトを除去
+    effect clear @a minecraft:night_vision
+    tag @a add NoNV
+
 
 # 召喚
     # ゾンビと村人の召喚数を設定

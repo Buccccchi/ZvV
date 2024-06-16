@@ -5,7 +5,6 @@
 #
 # @private
 
-
 # 召喚
     # ゾンビと村人の召喚数を設定
         scoreboard players set $Standby Global 10
