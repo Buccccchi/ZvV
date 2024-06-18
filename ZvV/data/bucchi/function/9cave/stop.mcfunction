@@ -19,6 +19,9 @@
 # 感圧板を再設置
     setblock 91 63 191 minecraft:heavy_weighted_pressure_plate
 
+# 水流を封鎖
+    setblock 102 63 210 minecraft:redstone_block
+
 
 # 基本処理
     # エンティティをkill
