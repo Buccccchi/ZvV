@@ -11,6 +11,7 @@
 
 # ウーパールーパー召喚
     summon minecraft:axolotl 109 66 208
+    summon minecraft:axolotl 107 66 209
     summon minecraft:axolotl 105 66 210
     tag @e[type=minecraft:axolotl] add Axolotl
 
