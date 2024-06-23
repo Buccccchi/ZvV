@@ -5,10 +5,11 @@
 #
 # @private
 
-summon minecraft:marker 88 66 105 {Tags: ["Trap1"]}
-summon minecraft:marker 88 66 106 {Tags: ["Trap1"]}
-summon minecraft:marker 112 66 105 {Tags: ["Trap2"]}
-summon minecraft:marker 112 66 106 {Tags: ["Trap2"]}
+# 荷物召喚用エンティティ
+    summon minecraft:marker 88 66 105 {Tags: ["Trap1"]}
+    summon minecraft:marker 88 66 106 {Tags: ["Trap1"]}
+    summon minecraft:marker 112 66 105 {Tags: ["Trap2"]}
+    summon minecraft:marker 112 66 106 {Tags: ["Trap2"]}
 
 
 # 召喚

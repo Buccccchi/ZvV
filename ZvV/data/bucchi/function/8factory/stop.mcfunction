@@ -5,8 +5,10 @@
 #
 # @private
 
-fill 90 65 109 110 69 110 minecraft:air replace #minecraft:anvil
-# 修復
+# 金床を消去
+    fill 90 65 109 110 69 110 minecraft:air replace #minecraft:anvil
+
+# ステージを修復
     setblock 100 63 105 minecraft:command_block{Command: "/function bucchi:8factory/trap/stopper"}
     fill 99 64 104 101 64 107 minecraft:redstone_lamp
     fill 98 64 103 102 64 108 minecraft:iron_block keep
