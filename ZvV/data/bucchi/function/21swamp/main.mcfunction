@@ -17,7 +17,7 @@ execute if block 192 65 -104 minecraft:spruce_pressure_plate[powered=false] if e
 execute positioned as @e[tag=Death,predicate=!bucchi:vehicle] run summon minecraft:item ~ ~ ~ {Tags: ["SlimeBall"], Item: {id: "minecraft:slime_ball", Count: 1b}}
 kill @e[tag=Death,predicate=!bucchi:vehicle]
 execute if entity @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] as @e[type=minecraft:zombie,nbt={HandItems: [{id: "minecraft:slime_ball"}, {}]}] run function bucchi:21swamp/trap/ball
-execute positioned as @e[tag=SlimeBall] if predicate bucchi:random/20 run particle minecraft:dust 0.2 1.0 0.2 1.0 ~ ~1 ~ 0 0 0 0 0 force
+execute positioned as @e[tag=SlimeBall] if predicate bucchi:random/20 run particle minecraft:dust{color: [0.2, 1.0, 0.2], scale: 1.0} ~ ~1 ~ 0 0 0 0 0 force
 # ウィッチ
 execute if block 190 67 -91 minecraft:oak_pressure_plate[powered=true] unless entity @e[tag=StopWitch] run function bucchi:21swamp/trap/witch
 execute if block 190 67 -91 minecraft:oak_pressure_plate[powered=false] if entity @e[tag=StopWitch] run tag @e[tag=StopWitch] remove StopWitch
