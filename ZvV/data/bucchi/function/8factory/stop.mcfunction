@@ -5,17 +5,19 @@
 #
 # @private
 
-# 金床を消去
-    fill 90 65 109 110 69 110 minecraft:air replace #minecraft:anvil
+# ベルトコンベア停止
+    setblock 100 66 85 minecraft:stone
 
 # ステージを修復
-    setblock 100 63 105 minecraft:command_block{Command: "/function bucchi:8factory/trap/stopper"}
+    setblock 100 63 105 minecraft:command_block{Command: "/fill 100 65 106 100 65 105 minecraft:powered_rail"}
     fill 99 64 104 101 64 107 minecraft:redstone_lamp
     fill 98 64 103 102 64 108 minecraft:iron_block keep
     fill 99 67 111 101 67 111 minecraft:redstone_lamp
     fill 100 65 106 100 65 110 minecraft:rail
     setblock 100 65 105 minecraft:detector_rail
-    setblock 100 65 100 minecraft:stone_pressure_plate
+    execute if block 100 66 100 minecraft:air run setblock 100 66 100 minecraft:polished_blackstone_pressure_plate
+    fill 102 65 102 98 65 102 minecraft:chiseled_tuff_bricks
+    fill 101 65 102 99 65 102 minecraft:smooth_stone_slab
     fill 99 67 112 101 67 112 minecraft:stone
 
 

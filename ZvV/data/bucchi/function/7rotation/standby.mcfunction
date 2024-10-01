@@ -8,8 +8,9 @@
 # ゲームルール変更
     gamerule doFireTick true
 
-# 回転方向表示
-    setblock 99 68 12 minecraft:redstone_block
+# 回転方向設定
+    scoreboard players set $Direction Global 0
+    setblock 101 68 12 minecraft:redstone_block
 
 # ステージの回転状態設定
     scoreboard players set $Rotation Global 3

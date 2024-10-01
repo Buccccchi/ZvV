@@ -10,7 +10,7 @@ execute if block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] if
 execute unless block 200 65 -200 minecraft:light_weighted_pressure_plate[power=0] unless entity @e[tag=Activate] run function bucchi:20mirror/trap/mirror/change
 tag @e[tag=Alive] remove Alive
 scoreboard players remove @e[tag=False,scores={Global=1..}] Global 1
-execute as @e[tag=False] at @e[tag=True] if score @s id = @e[distance=0,limit=1] id run function bucchi:20mirror/trap/mirror/main
+execute as @e[tag=False] at @e[tag=True] if score @s ID = @e[distance=0,limit=1] ID run function bucchi:20mirror/trap/mirror/main
 execute if entity @e[tag=False] run kill @e[tag=Fighter,tag=!Alive]
 execute positioned as @e[tag=False] run particle minecraft:dust{color: [0.2, 1.0, 1.0], scale: 1.0} ~ ~2 ~ 0 0 0 0 0 force
 execute if entity @e[tag=False] positioned 200 66 -200 rotated as @e[tag=Surface] positioned ^ ^ ^5 rotated as @e[tag=Surface] positioned ^ ^ ^2.5 rotated as @e[tag=Surface] positioned ^ ^ ^1.25 rotated as @e[tag=Surface] positioned ^ ^ ^0.625 rotated as @e[tag=Surface] positioned ^ ^ ^0.3125 run particle minecraft:soul_fire_flame ~ ~ ~ 0 0.5 0 0 1

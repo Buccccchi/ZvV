@@ -17,6 +17,10 @@
     scoreboard objectives add Count dummy {"text": "残りの数", "color": "green", "bold": true, "underlined": true}
     scoreboard objectives setdisplay sidebar Count
 
+#> 自動バランス確認用のスコアボード
+# @public
+    scoreboard objectives add Auto dummy
+
 #> ニンジン付きの棒の使用を検知するスコアボード
 #
 # 主にステージ説明時に使用

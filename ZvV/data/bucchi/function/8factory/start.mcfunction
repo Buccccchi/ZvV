@@ -22,3 +22,6 @@
 
 # エフェクト付与
     effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed infinite 0 true
+
+# ゾンビのスコアを0に設定
+    scoreboard players set @e[type=minecraft:zombie,tag=!DontKill] Global 0

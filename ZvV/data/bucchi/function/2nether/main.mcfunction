@@ -13,7 +13,7 @@
 
 
 # 自動バランス確認時に試合時間を計測
-    execute if data storage global {Auto: 1b} run scoreboard players add $経過tick Count 1
+    execute if data storage minecraft:global {Auto: 1b} run scoreboard players add $Tick Auto 1
 
 # 試合終了
     execute if score ゾンビ Count matches 0 run function bucchi:end {"stage": "2nether"}

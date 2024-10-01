@@ -20,5 +20,12 @@
 # プレイヤーにタグ DontKill を付与
     tag @a[tag=!DontKill] add DontKill
 
+# 自動バランス確認
+    # 情報の表示
+        execute if data storage minecraft:global {Auto: 1b} run title @a actionbar ["", {"text": "ゾンビ ", "bold": true, "color": "green"}, {"score": {"objective": "Auto", "name": "$Zombie"}, "color": "yellow"}, {"text": "-"}, {"score": {"objective": "Auto", "name": "$Draw"}, "color": "yellow"}, {"text": "-"}, {"score": {"objective": "Auto", "name": "$Villager"}, "color": "yellow"}, {"text": " 村人", "bold": true, "color": "gold"}, {"text": " | "}, {"text": "平均時間", "bold": true}, {"text": ": "}, {"score": {"objective": "Auto", "name": "$AveSec"}, "bold": false, "color": "yellow"}, {"text": "秒", "bold": true}, {"text": " | "}, {"text": "経過時間", "bold": true}, {"text": ": "}, {"score": {"objective": "Auto", "name": "$Tick"}}, {"text": "ticks"}]
+    # 経過時間が10分を超えた場合，経過時間を平均として強制終了
+        execute if data storage minecraft:global {Auto: 1b} if score $Tick Auto matches 12000.. run kill @e[tag=!DontKill]
+        execute if data storage minecraft:global {Auto: 1b} if score $Tick Auto matches 12000.. run scoreboard players operation $Tick Auto = $AveTick Auto
+
 # ステージ説明用
     #function bucchi:describe/main
