@@ -14,7 +14,7 @@
 # 上昇
     execute if score $Burn Global matches 2..16 as @e[tag=Grab] positioned as @s run teleport @s ~ ~0.2 ~
     execute if score $Burn Global matches 1..15 positioned as @e[tag=Core] run teleport @e[tag=Burn] ~ ~-2.1 ~
-    execute if score $Burn Global matches 3 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: -1, interpolation_duration: 15, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 0.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -0.2f, -0.05f]}}
+    execute if score $Burn Global matches 2 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: 0, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 0.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -0.2f, -0.05f]}}
 
 # 燃焼室に移動
     execute if score $Burn Global matches 17 if entity @e[tag=Core,x=91.6,y=70,z=91.5,dx=4.9,dy=0,dz=5] as @e[tag=X] positioned as @s run teleport @s ~-0.1 ~ ~
@@ -26,7 +26,7 @@
 # 下降
     execute if score $Burn Global matches 19..33 as @e[tag=Grab] positioned as @s run teleport @s ~ ~-0.2 ~
     execute if score $Burn Global matches 18..32 positioned as @e[tag=Core] run teleport @e[tag=Burn] ~ ~-2.5 ~
-    execute if score $Burn Global matches 19 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: -1, interpolation_duration: 15, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 3.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -3.2f, -0.05f]}}
+    execute if score $Burn Global matches 19 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: 0, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 3.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -3.2f, -0.05f]}}
 
 # 燃焼
     execute if score $Burn Global matches 33..72 positioned as @e[tag=Core] run teleport @e[tag=Burn] ~ ~-2.3 ~
@@ -49,7 +49,7 @@
 # 上昇
     execute if score $Burn Global matches 74..88 as @e[tag=Grab] positioned as @s run teleport @s ~ ~0.2 ~
     execute if score $Burn Global matches 73..87 positioned as @e[tag=Core] run teleport @e[tag=Burn] ~ ~-2.1 ~
-    execute if score $Burn Global matches 75 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: -1, interpolation_duration: 15, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 0.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -0.2f, -0.05f]}}
+    execute if score $Burn Global matches 74 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: 0, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 0.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -0.2f, -0.05f]}}
 
 # 中央に移動
     execute if score $Burn Global matches 88..117 as @e[tag=Burn] positioned as @e[tag=Core] run teleport @e[tag=Burn] ~0.1 68 ~0.1
@@ -59,7 +59,7 @@
 # 下降
     execute if score $Burn Global matches 119..133 as @e[tag=Grab] positioned as @s run teleport @s ~ ~-0.2 ~
     execute if score $Burn Global matches 118..132 positioned as @e[tag=Core] run teleport @e[tag=Burn] ~ ~-2.5 ~
-    execute if score $Burn Global matches 119 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: -1, interpolation_duration: 15, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 3.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -3.2f, -0.05f]}}
+    execute if score $Burn Global matches 119 run data merge entity @e[tag=Hang,limit=1] {start_interpolation: 0, transformation: {right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.1f, 3.2f, 0.1f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], translation: [-0.05f, -3.2f, -0.05f]}}
 
 # 終了
     execute if score $Burn Global matches 134 run data modify entity @e[tag=Burn,limit=1] NoGravity set value 0b
