@@ -21,4 +21,4 @@
     fill 88 69 198 88 69 202 minecraft:stone
 
 # エフェクト付与
-    effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed infinite 0 true
+    effect give @e[type=minecraft:zombie,tag=!DontKill] minecraft:speed infinite 1 true

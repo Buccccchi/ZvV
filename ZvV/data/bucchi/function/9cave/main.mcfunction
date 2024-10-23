@@ -15,30 +15,22 @@
 
 # コウモリ
     scoreboard players add @e[tag=Bat] Global 1
-    execute if entity @e[tag=Bat,scores={Global=100}] as @e[tag=Bat,scores={Global=100}] positioned as @s run summon minecraft:potion ~ ~ ~ {Item: {id: "minecraft:splash_potion", count: 1, components: {"minecraft:potion_contents": {potion: "minecraft:healing"}}}}
-    execute if entity @e[tag=Bat,scores={Global=100}] run scoreboard players set @e[tag=Bat,scores={Global=100}] Global 0
-
-# ウーパールーパー
-    scoreboard players add @e[tag=Axolotl,scores={Global=..-1}] Global 1
-    execute as @e[tag=Axolotl,nbt=!{Brain: {memories: {"minecraft:play_dead_ticks": {}}}}] unless score @s Global matches ..-1 positioned as @s store result score @s Global if entity @e[type=minecraft:zombie,distance=..2]
-    execute if entity @e[tag=Axolotl,scores={Global=3..}] positioned as @e[tag=Axolotl,scores={Global=3..}] as @e[type=minecraft:zombie,distance=..2] run damage @s 4.0 minecraft:mob_attack by @n[tag=Axolotl]
-    execute if entity @e[tag=Axolotl,scores={Global=3..}] run scoreboard players set @e[tag=Axolotl,scores={Global=3..}] Global -20
-
-# 水流
-    execute if block 107 67 207 minecraft:stone_pressure_plate[powered=false] run setblock 102 63 210 minecraft:redstone_block
-    execute if block 107 67 207 minecraft:stone_pressure_plate[powered=true ] run setblock 102 63 210 minecraft:stone
+    execute if entity @e[tag=Bat,scores={Global=200}] as @e[tag=Bat,scores={Global=200}] positioned as @s run summon minecraft:potion ~ ~ ~ {Item: {id: "minecraft:splash_potion", count: 1, components: {"minecraft:potion_contents": {potion: "minecraft:healing"}}}}
+    execute if entity @e[tag=Bat,scores={Global=200}] run scoreboard players set @e[tag=Bat,scores={Global=200}] Global 0
 
 # 鍾乳石
-    execute unless block 94 67 206 minecraft:heavy_weighted_pressure_plate[power=0] unless score $Dripstone Global matches 0..9 run scoreboard players set $Dripstone Global 0
-    execute if score $Dripstone Global matches 0..9 run scoreboard players add $Dripstone Global 1
-    execute if score $Dripstone Global matches 1 positioned as @n[type=minecraft:zombie,tag=!DontKill,x=94.5,y=67,z=206.5] run summon minecraft:falling_block ~ ~2 ~ {FallHurtAmount: 4.0f, FallHurtMax: 40, HurtEntities: 1b, BlockState: {Name: "minecraft:pointed_dripstone", Properties: {thickness: "tip", vertical_direction: "down"}}}
-    execute if score $Dripstone Global matches 1 positioned as @n[type=minecraft:zombie,tag=!DontKill,x=94.5,y=67,z=206.5] run summon minecraft:falling_block ~ ~3 ~ {BlockState: {Name: "minecraft:pointed_dripstone", Properties: {thickness: "frustum", vertical_direction: "down"}}}
-    execute if score $Dripstone Global matches 1 positioned as @n[type=minecraft:zombie,tag=!DontKill,x=94.5,y=67,z=206.5] run summon minecraft:falling_block ~ ~4 ~ {BlockState: {Name: "minecraft:pointed_dripstone", Properties: {thickness: "base", vertical_direction: "down"}}}
+    execute if block 94 67 206 minecraft:stone_pressure_plate[powered=true] unless score $Dripstone Global matches ..4 run scoreboard players set $Dripstone Global 0
+    execute if score $Dripstone Global matches ..4 run scoreboard players add $Dripstone Global 1
+    execute if score $Dripstone Global matches 1 positioned as @n[type=minecraft:zombie,tag=!DontKill,x=94.5,y=67,z=206.5] run function bucchi:9cave/trap/dripstone
 
 # 燃焼
-    execute as @e[type=!minecraft:villager,x=110.5,y=65,z=190.5,distance=..2] run data modify entity @s Fire set value 200s
-    execute positioned as @e[type=!minecraft:villager,x=110.5,y=65,z=190.5,distance=..2] run particle minecraft:lava ~ ~ ~ 0 0 0 0 0 force
-    teleport @e[type=minecraft:villager,predicate=bucchi:lava] 108 65 192
+    execute as @e[type=!minecraft:villager,x=110.5,y=65,z=195.5,distance=..1.5] run data modify entity @s Fire set value 200s
+    execute positioned as @e[type=!minecraft:villager,x=110.5,y=65,z=195.5,distance=..1.5] run particle minecraft:lava ~ ~ ~ 0 0 0 0 0 force
+
+# 砂利沈下
+    execute if data storage minecraft:global {GravelSink: 0b} unless block 92 64 192 minecraft:heavy_weighted_pressure_plate if block 92 63 191 minecraft:gravel run setblock 92 62 192 minecraft:repeating_command_block{Command: "/execute if entity @e[type=minecraft:zombie,x=90,y=64,z=190,dx=6,dy=0,dz=6] run function bucchi:9cave/trap/gravel_fall"}
+    execute if data storage minecraft:global {GravelSink: 0b} unless block 92 64 192 minecraft:heavy_weighted_pressure_plate if block 92 63 191 minecraft:gravel run setblock 92 64 192 minecraft:heavy_weighted_pressure_plate
+    execute if data storage minecraft:global {GravelSink: 1b} unless block 91 68 191 minecraft:heavy_weighted_pressure_plate[power=0] if block 92 67 191 minecraft:gravel run function bucchi:9cave/trap/gravel_sink
 
 
 # 自動バランス確認時に試合時間を計測

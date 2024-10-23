@@ -14,6 +14,7 @@
     summon minecraft:axolotl 107 66 209
     summon minecraft:axolotl 105 66 210
     tag @e[type=minecraft:axolotl] add Axolotl
+    execute as @e[tag=Axolotl] run attribute @s minecraft:generic.follow_range base set 4.0
 
 
 # 召喚
